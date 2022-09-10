@@ -1,3 +1,3 @@
-# [Live Demo](https://amiralakbarli-redux-todoapp.netlify.app/)
+# [Live Demo](https://amiralakbarli.github.io/Todo-App/)
 
 ## Full stack Todo App with ReactJS, NodeJS and MongoDB
