@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Todo-App/static/css/main.6052f8fc.css",
+    "main.js": "/Todo-App/static/js/main.a253376a.js",
+    "static/media/edit.png": "/Todo-App/static/media/edit.62c7f2a7efef6ac9f80d.png",
+    "static/media/circle.png": "/Todo-App/static/media/circle.d3de8ef5646800e3024d.png",
+    "static/media/check.png": "/Todo-App/static/media/check.0e163e83492acb677d72.png",
+    "static/media/add.png": "/Todo-App/static/media/add.9c72f17f3bde1c91d41e.png",
+    "static/media/delete.png": "/Todo-App/static/media/delete.0988f2cd75f3c7d1f33e.png",
+    "static/media/github.svg": "/Todo-App/static/media/github.05e888c747a05f1693c375990000104a.svg",
+    "static/media/twitter.svg": "/Todo-App/static/media/twitter.a8d2b8925359cabec01f7784d28067f4.svg",
+    "static/media/instagram.svg": "/Todo-App/static/media/instagram.f8f78681f45873db69d28206c68a2e6b.svg",
+    "index.html": "/Todo-App/index.html",
+    "static/media/linkedin.svg": "/Todo-App/static/media/linkedin.8d7a24be03725245b1324c423260a70c.svg",
+    "static/media/facebook.svg": "/Todo-App/static/media/facebook.af9d80bf0090363368629155e0424837.svg",
+    "main.6052f8fc.css.map": "/Todo-App/static/css/main.6052f8fc.css.map",
+    "main.a253376a.js.map": "/Todo-App/static/js/main.a253376a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6052f8fc.css",
+    "static/js/main.a253376a.js"
+  ]
+}
