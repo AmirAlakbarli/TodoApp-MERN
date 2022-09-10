@@ -1,0 +1,20 @@
+.empty-list {
+    position: relative;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    img {
+        position: absolute;
+        height: 70%;
+        opacity: 0.3;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,17 @@
+.todo-list {
+    padding: 3px 2px;
+    background: white;
+    max-height: 24rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

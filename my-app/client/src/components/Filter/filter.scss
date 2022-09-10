@@ -1,0 +1,36 @@
+.filter {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+
+    .filter {
+        width: 65%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .btn {
+        border-radius: 10px;
+        padding: 5px 10px;
+        border: none;
+        outline: none;
+        background-color: white;
+        color: gray;
+        cursor: pointer;
+    }
+
+    .btn-all,
+    .btn-active,
+    .btn-completed {
+        &.active {
+            background-color: rgb(155, 154, 154);
+            color: white
+        }
+    }
+
+}
