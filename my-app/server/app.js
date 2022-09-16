@@ -18,7 +18,7 @@ const server = http.createServer(async (req, res) => {
 
   // set the request route
 
-  // /api/todos : GET
+  // OPTIONS method for preflight request to server sending POST, PATCH, DELETE request
   if (req.method === "OPTIONS") {
     try {
       res.writeHead(204, headers);
@@ -26,7 +26,9 @@ const server = http.createServer(async (req, res) => {
     } catch (error) {
       throw error;
     }
-  } else if (req.url === "/api/todos" && req.method === "GET") {
+  } 
+  // /api/todos : GET
+  else if (req.url === "/api/todos" && req.method === "GET") {
     // get all todos
     try {
       const allTodos = await todos.getAllDocuments();
