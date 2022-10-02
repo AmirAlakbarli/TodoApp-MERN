@@ -2,7 +2,6 @@ const http = require("http");
 const express = require("express");
 const { ObjectId } = require("mongodb");
 const Server = require("./controller");
-const { getReqData } = require("./utils");
 const PORT = process.env.PORT || 5000;
 
 //! Initializing the App
