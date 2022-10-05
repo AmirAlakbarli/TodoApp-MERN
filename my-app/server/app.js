@@ -1,4 +1,3 @@
-const http = require("http");
 const express = require("express");
 const { ObjectId } = require("mongodb");
 const Server = require("./controller");
@@ -30,15 +29,14 @@ app.options("*", (req, res) => {
   res.header(headers);
   res.status(204).json({});
 });
+
 // /api/todos : GET
-app.get("/api/todos", async (req, res, next) => {
-  if (Object.keys(req.query).length > 0) {
-    next();
-    return;
-  }
+app.get("/api/todos", async (req, res) => {
   try {
+    if (req?.query?.isCompleted)
+      req.query.isCompleted = req.query.isCompleted === "true";
     await getAllTodos();
-    const allTodos = await todos.getAllDocuments();
+    const allTodos = await todos.getAllDocuments(req.query);
     if (!allTodos) {
       return res.status(404).json({
         message: "Problem was found retrieving all todos",
@@ -150,22 +148,6 @@ app.delete("/api/todos", async (req, res) => {
     }
     res.header(headers);
     res.status(200).json(allDeleted);
-  } catch (error) {
-    res.status(404).json({
-      message: error.toString(),
-    });
-  }
-});
-
-// api/todos?isCompleted=boolean GET
-app.get("/api/todos", async (req, res) => {
-  try {
-    await getAllTodos();
-    if (req?.query?.isCompleted)
-      req.query.isCompleted = req.query.isCompleted === "true";
-    const filteredTodos = await todos.filterDocuments(req.query);
-    res.header(headers);
-    res.status(200).json(filteredTodos);
   } catch (error) {
     res.status(404).json({
       message: error.toString(),

@@ -7,8 +7,7 @@ dotenv.config();
 
 // use mongodb for retrieving all data
 const { MongoClient } = require("mongodb");
-const url = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@server.ctltk7y.mongodb.net/?retryWrites=true&w=majority`;
-
+const url = process.env.DB_URL.replace("<password>", process.env.DB_PASSWORD);
 const client = new MongoClient(url);
 
 class Controller {
@@ -31,9 +30,9 @@ class Controller {
   }
 
   // get all documents
-  async getAllDocuments() {
+  async getAllDocuments(query) {
     let collection = await this.#collection;
-    let allDocuments = await collection.find().toArray();
+    let allDocuments = await collection.find(query).toArray();
     return allDocuments;
   }
 
@@ -71,13 +70,6 @@ class Controller {
     let collection = await this.#collection;
     let allDeleted = await collection.deleteMany({});
     return allDeleted;
-  }
-
-  // filter documents by filed inside object like parametrs
-  async filterDocuments(filterFields) {
-    let collection = await this.#collection;
-    let filteredDocuments = await collection.find(filterFields).toArray();
-    return filteredDocuments;
   }
 }
 
