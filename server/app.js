@@ -9,7 +9,7 @@ app.use(express.json());
 
 // const server = http.createServer(async (req, res) => {
 const headers = {
-  "Access-Control-Allow-Origin": "https://amiralakbarli.github.io/Todo-App/",
+  "Access-Control-Allow-Origin": "https://amiralakbarli.github.io",
   "Access-Control-Allow-Methods": "OPTIONS, GET, PUT, PATCH, POST, DELETE",
   "Access-Control-Allow-Headers": "Content-Type",
   "Access-Control-Max-Age": 2592000, // 30 days
