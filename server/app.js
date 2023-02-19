@@ -25,7 +25,6 @@ const getAllTodos = async () => {
 
 // options for preflight request
 app.options("*", (req, res) => {
-  console.log("options");
   res.header(headers);
   res.status(204).json({});
 });
@@ -116,12 +115,10 @@ app.patch("/api/todos/:id", async (req, res) => {
 
 // api/todos/:id : DELETE
 app.delete("/api/todos/:id", async (req, res) => {
-  console.log("delete");
   try {
     await getAllTodos();
     const id = req.params.id;
     const deletedTodo = await todos.deleteDocument(ObjectId(id));
-    console.log(deletedTodo);
     if (!deletedTodo.deletedCount) {
       return res.status(404).json({
         message: "Todo with this id not found",
